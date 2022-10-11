@@ -1,0 +1,44 @@
+INFO - KL warm-up, anneal coeff: 0.0
+INFO - Epoch: 0 training time 3.90m
+INFO - Train => tot: 0.000362 recon 0.000089 KL 0.000273 Val => tot: 0.000044 recon 0.000044 KL 0.000000
+INFO - Epoch: 0 ===> checkpoint stored with current best epoch: 0
+INFO - Epoch: 1 training time 3.90m
+INFO - Train => tot: 0.000344 recon 0.000086 KL 0.000258 Val => tot: 0.000043 recon 0.000043 KL 0.000000
+INFO - Epoch: 2 training time 3.97m
+INFO - Train => tot: 0.000328 recon 0.000086 KL 0.000242 Val => tot: 0.000043 recon 0.000043 KL 0.000000
+INFO - Epoch: 3 training time 4.15m
+INFO - Train => tot: 0.000313 recon 0.000086 KL 0.000227 Val => tot: 0.000043 recon 0.000043 KL 0.000000
+INFO - Epoch: 4 training time 3.90m
+INFO - Train => tot: 0.000302 recon 0.000086 KL 0.000216 Val => tot: 0.000043 recon 0.000043 KL 0.000000
+INFO - Epoch: 5 training time 3.93m
+INFO - Train => tot: 0.000294 recon 0.000085 KL 0.000209 Val => tot: 0.000043 recon 0.000043 KL 0.000000
+INFO - Epoch: 6 training time 4.15m
+INFO - Train => tot: 0.000290 recon 0.000085 KL 0.000205 Val => tot: 0.000043 recon 0.000043 KL 0.000000
+INFO - Epoch: 7 training time 3.88m
+INFO - Train => tot: 0.000288 recon 0.000085 KL 0.000203 Val => tot: 0.000043 recon 0.000043 KL 0.000000
+INFO - Epoch: 8 training time 4.08m
+INFO - Train => tot: 0.000287 recon 0.000085 KL 0.000202 Val => tot: 0.000043 recon 0.000043 KL 0.000000
+INFO - Epoch: 9 training time 3.95m
+INFO - Train => tot: 0.000287 recon 0.000085 KL 0.000201 Val => tot: 0.000043 recon 0.000043 KL 0.000000
+INFO - KL warm-up, anneal coeff: 0.2
+INFO - Epoch: 10 training time 3.97m
+INFO - Train => tot: 0.000326 recon 0.000085 KL 0.000241 Val => tot: 0.000083 recon 0.000043 KL 0.000040
+INFO - Epoch: 10 ===> checkpoint stored with current best epoch: 10
+INFO - Epoch: 11 training time 4.03m
+INFO - Train => tot: 0.000326 recon 0.000085 KL 0.000241 Val => tot: 0.000083 recon 0.000043 KL 0.000040
+INFO - Epoch: 12 training time 4.08m
+INFO - Train => tot: 0.000326 recon 0.000085 KL 0.000241 Val => tot: 0.000083 recon 0.000043 KL 0.000040
+INFO - Epoch: 13 training time 4.18m
+INFO - Train => tot: 0.000325 recon 0.000085 KL 0.000240 Val => tot: 0.000083 recon 0.000042 KL 0.000040
+INFO - Epoch: 14 training time 4.07m
+INFO - Train => tot: 0.000325 recon 0.000085 KL 0.000240 Val => tot: 0.000083 recon 0.000042 KL 0.000040
+INFO - Epoch: 15 training time 4.12m
+INFO - Train => tot: 0.000325 recon 0.000085 KL 0.000240 Val => tot: 0.000083 recon 0.000042 KL 0.000040
+INFO - Epoch: 16 training time 4.32m
+INFO - Train => tot: 0.000325 recon 0.000085 KL 0.000240 Val => tot: 0.000082 recon 0.000042 KL 0.000040
+INFO - Epoch: 17 training time 4.28m
+INFO - Train => tot: 0.000325 recon 0.000085 KL 0.000240 Val => tot: 0.000082 recon 0.000042 KL 0.000040
+INFO - Epoch: 18 training time 4.17m
+INFO - Train => tot: 0.000325 recon 0.000085 KL 0.000240 Val => tot: 0.000082 recon 0.000042 KL 0.000040
+INFO - Epoch: 19 training time 4.27m
+INFO - Train => tot: 0.000325 recon 0.000085 KL 0.000240 Val => tot: 0.000082 recon 0.000042 KL 0.000040
