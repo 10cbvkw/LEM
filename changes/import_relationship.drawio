@@ -1,0 +1,566 @@
+<mxfile host="65bd71144e">
+    <diagram id="_4rUj1jVDPNeGSdqzM-9" name="Page-1">
+        <mxGraphModel dx="2362" dy="660" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1700" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="7" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="250" y="230" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-85" y="220"/>
+                            <mxPoint x="420" y="220"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="500" y="180" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-85" y="220"/>
+                            <mxPoint x="420" y="220"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-85" y="220"/>
+                            <mxPoint x="420" y="220"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-85" y="220"/>
+                            <mxPoint x="420" y="220"/>
+                        </Array>
+                        <mxPoint x="160" y="310" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="28" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="3" target="32" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="200" y="680" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="180" y="465"/>
+                            <mxPoint x="180" y="710"/>
+                            <mxPoint x="-85" y="710"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="3" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="train_VAE中只用到了HetonlyVAE&lt;br&gt;model&lt;br&gt;heter only VAE 不做形状的检测和推断&lt;br&gt;生成decoder与加载decoder&lt;br&gt;decoder:包括傅立叶切片decoder和哈特莱decoder，以及这两个对应的positional版本&lt;br&gt;Q: coords为什么是D^2*3 一共D^2个平面上的坐标点，但是每一个点被一个三维坐标表示&lt;br&gt;Q:3个decoder有什么区别&lt;br&gt;Q:两个VAE有什么区别，为什么第一个VAE没有生成代表结构信息的隐变量z，而只是对pose和translate用神经网络进行估计，Coords中到底有什么信息，为什么可以直接被输入到FTslicedecoder当中去&lt;br&gt;Q:为什么有img与img_tilt&lt;br&gt;Q:no_trans参数是什么，为什么没有这个参数时需要对img做哈特莱变换？&lt;br&gt;A:no_trans表示的是对图像的操作是否有平移，也不是说要做哈特莱变，而是要利用哈特莱变换后相位相乘的方式对图片进行平移" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="-330" y="230" width="490" height="470" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="fft&lt;br&gt;傅立叶变换，哈特莱变换以及对称哈特莱变换" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="90" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="lie tools&lt;br&gt;三维旋转对称群在矩阵与四元函数之间的转换，对数求和以及SO3高斯分布的熵" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="160" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="260" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="560" y="250"/>
+                            <mxPoint x="460" y="250"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="10" target="20" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="750" y="345" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="10" target="21" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="lattice&lt;br&gt;从utils中引用了log&lt;br&gt;包含class lattice和class even lattice" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="260" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="utils&lt;br&gt;日志记录log&lt;br&gt;pkl文件的写入读出&lt;br&gt;rotation的不同表述(EMAN,relion等)&lt;br&gt;输出关于x轴的旋转&lt;br&gt;返回内存的占用&lt;br&gt;(看下python 装饰器)&lt;br&gt;zero sphere" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="350" width="120" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="class lattice&lt;br&gt;三维coordinarte&lt;br&gt;输入：&lt;br&gt;D 延拓 忽略直流分量 CPU/CUDA&lt;br&gt;内容：&lt;br&gt;coords，extent，D，D/2&lt;br&gt;center，mask，freq，DC，device&lt;br&gt;方法：&lt;br&gt;降采样到想要的维度&lt;br&gt;输出center后的coords&lt;br&gt;获取binary mask(圆形或者方形)&lt;br&gt;对坐标系旋转&lt;br&gt;平移图像在傅立叶变换&lt;br&gt;平移图片在哈特莱变换&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="220" width="200" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="class even lattice&lt;br&gt;继承 lattice&lt;br&gt;允许D为偶数，会对偶数D做降维度" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="440" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="python文件&lt;br&gt;从上走线表示引用&lt;br&gt;从右走线表示类&lt;br&gt;左边为接口" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1090" y="10" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="class，记录输入输出与内部调用method" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-910" y="10" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;span&gt;class hetonlyVAE&lt;br&gt;lattice,qlayers,qdim,players,&lt;br&gt;pdim,in_dim,zdim&lt;/span&gt;&lt;br&gt;&lt;span&gt;encode_mode,enc_mask,&lt;br&gt;enc_type,enc_dim&lt;/span&gt;&lt;br&gt;&lt;span&gt;domain,activation,feat_sigma&lt;/span&gt;&lt;br&gt;&lt;span&gt;方法：&lt;/span&gt;&lt;br&gt;&lt;span&gt;load一个预先训练好的网络&lt;/span&gt;&lt;br&gt;&lt;span&gt;reparameterization trick&lt;/span&gt;&lt;br&gt;&lt;span&gt;encode 得到z，以及z的连接&lt;br&gt;decode和forward的过程&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="230" width="190" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="class positional decoder&lt;br&gt;Q:为什么decoder有indim和hiddendim (zdim = indim - 3),indim是连同坐标一起的输入维度，&lt;br&gt;hidden dim是decoder的每一层的节点个数，hiddenlayer最后输入的维数是out dim&lt;br&gt;positional 版本含有线性的和几何的positional encoding操作，前向过程&lt;br&gt;(前向过程生成二维切片),体积生成过程(生成三维体积)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="410" width="190" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="class FT positional decoder&lt;br&gt;在这个类别中我们采用傅立叶变换而不是哈特利变换，对position的信息进行编码，对图片进行切片，对结果进行傅立叶逆变换" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="590" width="190" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="class VAE&lt;br&gt;input: lattice p/qlayers/dim,mode,trans.mask&lt;br&gt;content:lattice,D,indim(:=D*D),SO3_encoder(:SO3reparameterize),&lt;br&gt;trans_encoder(:=ResidLinearMLP),encoder,decoder,no_trans&lt;br&gt;method:reparameterize,encode(encode中zmu与zlogvar由SO3_encoder产生，tmu，tlogvar由trans_encoder产生，还有encoder可以产生一个enc，这个enc被输入到SO3_encoder后产生了zmu与zstd)，产生三维体积，decode(对三维坐标进行空间旋转之后放入decoder中，decoder的输入是coords)，forward&lt;br&gt;decoder用的是FT slice Decoder" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-330" y="730" width="490" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="class tilt VAE&lt;br&gt;selfdecoder仍然是FLSilceDecoder&lt;br&gt;在tilt中我们需要一些编码信息，存储在tilt(3*3)当中" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="130" width="190" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="class FT slice decoder" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="670" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="38" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-645" y="210"/>
+                            <mxPoint x="-350" y="210"/>
+                            <mxPoint x="-350" y="465"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="41" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="38" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-170" y="120" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-645" y="210"/>
+                            <mxPoint x="420" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="43" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="38" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="310" y="90" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-645" y="210"/>
+                            <mxPoint x="420" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="44" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="38" target="40" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="285" y="60" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-645" y="210"/>
+                            <mxPoint x="420" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="38" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="100" y="150" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-645" y="210"/>
+                            <mxPoint x="420" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="52" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="38" target="46" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="30" y="-20" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-645" y="210"/>
+                            <mxPoint x="420" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="53" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="38" target="51" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-190" y="30" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-645" y="210"/>
+                            <mxPoint x="420" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="60" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="38" target="56" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="38" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="90" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-645" y="210"/>
+                            <mxPoint x="420" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="77" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="38" target="74" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="160" y="30" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-645" y="210"/>
+                            <mxPoint x="420" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" value="train_vae&lt;br&gt;1、读取命令行中的参数，add_argument(...)&lt;br&gt;2、train_batch (赋予导数、设置为训练模式，process input(用哈特莱相移的方式表示平移变换)，run_model, calculate loss, backpropogation)&lt;br&gt;3、run_batch (计算CTF(如果有ctf参数)，model.encode(input)得到z_mu,z_logvar(Q:用的是哪个encode，这里的model是hetonlyVAE，用的自然是hetonlyVAE的encode)，用reparameterization的方式得到Z，用model(加窗后的lattice.coords*rotation，Z)函数得到输出的reconstruction(如果有CTF，作用其中)是不是因为model(**)会自动调用forward，然后forward再调用decode，decode再从decoder中选择一个合适的进行调用)&lt;br&gt;4、loss_function mse(gen_loss)+kld&lt;br&gt;5、eval_z，获取数据集中全部.mrcs particle经过encoder的Z的信息&lt;br&gt;6、保存断点，保存config，获取最新的状态信息" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-920" y="230" width="550" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="mrc类型的文件都有一个header，记录一些必要信息，读取图像，lazy读取图像，apix，origin" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="500" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="46" target="47" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="46" target="49" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="dataset&lt;br&gt;load_particle函数读取.star/.txt/.mrcs文件&lt;br&gt;(lazy)MRCdata" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="590" width="120" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="class mrcdata&lt;br&gt;实空间图片被加载，可以加实空间窗&lt;br&gt;做二维哈特莱变换，对称哈特莱变换&lt;br&gt;归一化并取实部&lt;br&gt;tilt series pair&lt;br&gt;class tilt mrcdata" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="510" width="200" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="class processMRCdata&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="610" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="ctf&lt;br&gt;计算2Dctf:在已经得到了ctf的文件之后加载除了D之外的参数，然后计算CTF，用于之后系统层面的相乘或者卷积&lt;br&gt;plot_ctf(系统中每一个成像点的ctf不一样)&lt;br&gt;加载更换了实际用到的D的ctf参数" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="670" width="120" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="操作流程" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="-920" y="440" width="550" height="320" as="geometry">
+                        <mxRectangle x="-1060" y="540" width="80" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="57" value="1 时间/日志/随机数种子选取/CUDA设置/beta的数值设置(lossfunc中kld与mse的占比)/index filter" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="56" vertex="1">
+                    <mxGeometry y="30" width="550" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="2 加载数据，(lazy用lazy情况下的数据集，processed用processed情况下的数据集，对‘tilt’额外考虑)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="56" vertex="1">
+                    <mxGeometry y="60" width="550" height="30" as="geometry"/>
+                </mxCell>
+                <object label="3 加载poses和ctf，如果do_pose_sdg参数有值，poses被加载是将会被设置为可训练的，赋予优化器" hedietLinkedDataV1_path="../testing" id="59">
+                    <mxCell style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="56" vertex="1">
+                        <mxGeometry y="90" width="550" height="30" as="geometry"/>
+                    </mxCell>
+                </object>
+                <mxCell id="62" value="4 建立模型：得到lattice，加mask，设置encoder input_dim参数，选择激活函数，在class hetonlyVAE&#10;的基础之上实例化一个model并设置cpu/cuda，保存config，设置adam优化器" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="56" vertex="1">
+                    <mxGeometry y="120" width="550" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="5 对AMP training的限制，从checkpoint加载模型，用于继续训练，并行训练设置" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="56" vertex="1">
+                    <mxGeometry y="150" width="550" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="6 循环训练的周期&#10;    1 加载Dataloader, 设置训练周期数&#10;    2 对每一个epoch进行训练，初始化loss和batch，提取datagenerator中的minibatch数据&#10;    3 看是否要对pose做生成，赋予导数值，调用trainbatch进行计算loss，gen_loss，kld，优化poses&#10;    4 写日志，加断点，保存weight和z&#10;    5 在断点处对模型进行评估(调用model.eval())，调用eval_z(eval_z在这里的作用是什么？)，&#10;       保存断点信息&#10;    6 所有epoch在训练完成之后对模型进行评估，保存断点信息(注释说还会evaluate the model on &#10;       3D lattice)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="56" vertex="1">
+                    <mxGeometry y="180" width="550" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="流程图" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="-780" y="10" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="Item 1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="69" vertex="1">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="74" target="75" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="pose&lt;br&gt;读取、存入、读取当前值" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="860" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="class pose tracker&lt;br&gt;读取、存入、读取当前值&lt;br&gt;一般记录rotation，translation如果有的话也会被操作&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="660" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="86" target="87" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="86" target="88" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="86" target="89" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="86" target="91" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="86" target="93" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="86" target="94" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="86" target="95" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="86" target="98" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="main" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-60" y="900" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="load data&lt;br&gt;dataset.lazy_data&lt;br&gt;dataset.processed_data&lt;br&gt;dataset.mrcdata&lt;br&gt;dataset.tilt_mrcdata" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1000" y="1020" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="load poses&lt;br&gt;PoseTracker.load&lt;br&gt;pose_optimizer = torch.&lt;br&gt;optim.sparseAdam" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-830" y="1020" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="load ctf&lt;br&gt;load_ctf_for_training" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-680" y="1020" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="91" target="110" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-370" y="1130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="112" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="91" target="111" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="91" target="113" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="91" target="114" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="91" target="118" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-390" y="1160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="120" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="91" target="119" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="lattice&lt;br&gt;实例化Lattice&lt;br&gt;设置lattice类中的参数配置，调其中的get_circular_mask()函数" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-440" y="1020" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="149" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="93" target="142" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="150" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="93" target="140" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="model&lt;br&gt;实例化 hetonlyVAE" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-210" y="1020" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="save_config()&lt;br&gt;在本地保存参数" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="1020" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="优化器设置&lt;br&gt;torch.optim.Adam" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="1020" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="98" target="99" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="550" y="1130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="97" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="98" target="100" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="98" target="101" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="98" target="104" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="109" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="98" target="108" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="train_loop" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="485" y="1020" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="99" target="124" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-50" y="1290" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="99" value="dataloader&lt;br&gt;调用官方库，将处理好的数据加载成可调用的minibatch" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="1160" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="调用posetracker.getpose&lt;br&gt;(ind)计算旋转角和平移" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="1160" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="101" target="121" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="520" y="1270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="123" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="101" target="122" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="101" target="129" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="调用train_batch()对每一个epoch中每一个minibatch中的数据进行训练" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="1160" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="104" target="132" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="690" y="1270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="104" value="调用eval_z()&lt;br&gt;生成z_mu z_logvar" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="630" y="1160" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="保存断点结果&lt;br&gt;调用save_checkpoint对结果进行保存" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="1160" width="130" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="coords&lt;br&gt;coords由mashgrid产生的x0还有x1拉直，加上赋予了值为0的z之后stack得到，是一个遍历性质的平面三维坐标" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1000" y="1160" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="D，extent，D2&lt;br&gt;一些代表图片信息长度和扩展系数的参数" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-830" y="1160" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="加窗&lt;br&gt;square_mask&lt;br&gt;circle_mask" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-700" y="1160" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="freqs_2D&lt;br&gt;是不含Z轴信息的coords，此时z轴赋值均为0" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-570" y="1160" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="rotate&lt;br&gt;rotate在这里是个二维的旋转&lt;br&gt;仅仅提取了x，y的坐标细腻县之后按照旋转角度theta进行平面旋转，输出为旋转之后的image" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-440" y="1160" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="translate&lt;br&gt;利用傅立叶变换乘以相位信息的&lt;br&gt;translate_ft完成图像平移&lt;br&gt;利用哈特莱变换乘以相位信息的&lt;br&gt;translate_ht完成图像平移" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-250" y="1160" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" value="preprocess_input&lt;br&gt;将输入按照lattice坐标中的translate_ht进行平移变换，平移长度已经给出" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="1290" width="125" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="122" target="135" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="385" y="1410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="122" value="run_batch得到z,z_mu,z_logvar,y_recon&lt;br&gt;struction,y_recon_tilt,mask&lt;br&gt;input包括model,lattice,rot,tilt,ctf_params,yr" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="1290" width="190" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="124" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="83" y="1410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="124" value="dataloader调用MRCdata，其中调用load_particles加载.mrcs文件的数据 particles_shape&lt;br&gt;为N,ny,nx" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="1290" width="145" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="dataloader在此之后加载出的数据 batch序号(-1)&lt;br&gt;展开后的image(0),展开后的image_tilt(1)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="1410" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="129" target="138" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="loss_function&lt;br&gt;output:loss,gen_loss,kld&lt;br&gt;input:z_mu,z_logvar,y,yt,&lt;br&gt;y_recon,mask,beta,&lt;br&gt;y_recon_tilt,beta_control" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="485" y="1290" width="150" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="eval_z()&lt;br&gt;在model.evaluate的情况下使用&lt;br&gt;加载数据集，按照minibatch的方式逐步输入到encoder得到每一个betch下的z_mu z_logval&lt;br&gt;将这些z_mu z_logvar整合在一个列表当中" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="1290" width="290" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="135" target="93" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="490" y="1520" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="320" y="1550"/>
+                            <mxPoint x="-30" y="1550"/>
+                            <mxPoint x="-30" y="1000"/>
+                            <mxPoint x="-140" y="1000"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="135" value="runbatch操作包括以下几个步骤&lt;br&gt;数据处理，B，D，ctf判决处理，tilt判决处理&lt;br&gt;encode:调用model.encode对输入的数据集minibatch进行操作，其中过程需要对model进行unparpallelize&lt;br&gt;decode:对lattice加窗得到mask，用model调用得到输出的y_recon&lt;br&gt;整个流程如果要用到tilt需要进行相应的纠正" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="1410" width="320" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="loss_function&lt;br&gt;genloss = F.mse(y_recon,y)&lt;br&gt;kld = KL divergency&lt;br&gt;loss = genloss + beta*kld/mask.sum()" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="1410" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="146" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="140" target="144" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" value="encode" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1000" y="1300" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="148" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="142" target="147" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" value="decode&lt;br&gt;forward调用decode&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1000" y="1410" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="152" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="144" target="151" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="144" value="对输入的img拉直至后进行加窗(可选)&lt;br&gt;用self.encoder计算数据，得到z" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-830" y="1280" width="150" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="153" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="147" target="154" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-650" y="1440" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="172" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="147" target="173" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-810" y="1560" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="147" value="decode调用self.decoder&lt;br&gt;计算数据，其输入是coords和z的合并" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-830" y="1390" width="150" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="151" value="根据encode_mode选用合适的encoder作为self.encoder&lt;br&gt;可选的包括conv，resid，mlp，tilt" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-650" y="1290" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="156" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="154" target="157" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-480" y="1380" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-490" y="1440"/>
+                            <mxPoint x="-490" y="1380"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="154" value="self.decoder 调用 get_decoder函数得到需要的输出输入为,3+zdim(input_dim),D,&lt;br&gt;players,pdim,domain,&lt;br&gt;enc_dim,enc_type,&lt;br&gt;activation,feat_sigma" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-650" y="1375" width="140" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="161" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="157" target="160" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="162" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="157" target="163" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-250" y="1410" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="166" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="164" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-375" y="1480" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="167" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="157" target="165" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="157" value="get_decoder根据enc_type改变&lt;br&gt;当enc_type为none时如果在傅立叶域，model = FTSlicedecoder&lt;br&gt;如果在哈特莱域，model = ResidLinearMLP,(entype的默认值为resid)，其eval_volume借用positionalDecoder的volume&lt;br&gt;当enc_type不为none时，傅立叶域下model是FTpositionaldecoder，在哈特莱域下model是PositionalDecoder" style="rounded=1;whiteSpace=wrap;html=1;arcSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="-470" y="1270" width="190" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="160" value="在哈特莱域会计算eval_volume()&lt;br&gt;它接受的input包括coords,D,extent,norm.zval&lt;br&gt;产生实空间域的output体积" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-250" y="1270" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="169" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="163" target="165" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="170" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="163" target="164" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" value="positionaldecoder和residlinearMLP的区别在于前者需要对坐标信息进行编码之后输入到坐标位置当中去，而后者直接将坐标信息输入到input当中去&lt;br&gt;positional的decoder也是residlinearMLP，其接受的输入是positional_encoding_goem()而这个函数接受到的输入是coords&lt;br&gt;coords作为内置的信息嵌入到model中去，输入接受的也是in_dim维度的(coords+z)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-250" y="1360" width="180" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="171" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="164" target="165" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="164" value="positional_encoding_goem" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-660" y="1560" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="165" value="positional_encoding_linear" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-465" y="1560" width="180" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="173" value="cat_z" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-815" y="1560" width="120" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
